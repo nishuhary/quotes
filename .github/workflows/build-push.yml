@@ -48,7 +48,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ steps.docker_meta.outputs.tags }}
+          tags: nishanth2101/quotes:latest, nishanth2101/quotes:${{ github.run_number }}
           file: ./Dockerfile
           
    
