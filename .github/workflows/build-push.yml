@@ -51,12 +51,4 @@ jobs:
           tags: nishanth2101/quotes:latest, nishanth2101/quotes:${{ github.run_number }}
           file: ./Dockerfile
           
-  deployment:
-    runs-on: ubuntu-latest
-    environment: 
-      name: KodeKloud
-      url: https://kodekloud.com/topic/playground-docker/
-    steps:
-      - name: deploy
-        # ...deployment-specific steps
-   
+  
