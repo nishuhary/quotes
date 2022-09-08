@@ -25,5 +25,5 @@ jobs:
       
       - name: Docker Image
         run: |
-              docker build . -t nishanth2101/quotes:latest
+              docker pull nishanth2101/quotes:latest
               docker run -d -p 90:80 nishanth2101/quotes:latest
