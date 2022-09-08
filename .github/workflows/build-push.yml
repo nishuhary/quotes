@@ -51,4 +51,7 @@ jobs:
           tags: nishanth2101/quotes:latest, nishanth2101/quotes:${{ github.run_number }}
           file: ./Dockerfile
           
+      - name: image
+        run: docker build . -t nishanth2101/quotes:latest
+          
   
