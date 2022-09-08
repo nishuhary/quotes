@@ -51,7 +51,8 @@ jobs:
           tags: nishanth2101/quotes:latest, nishanth2101/quotes:${{ github.run_number }}
           file: ./Dockerfile
           
-      - name: image
-        run: docker build . -t nishanth2101/quotes:latest
-          
-  
+      - name: Docker Buildx Pull or Build
+        uses: djbender/docker-buildx-pull-or-build@v0.5
+        with:
+          image: nishanth2101/quotes:latest        
+       
