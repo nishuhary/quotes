@@ -54,5 +54,7 @@ jobs:
       - name: Docker Buildx Pull or Build
         uses: djbender/docker-buildx-pull-or-build@v0.5
         with:
+          docker_username: ${{ secrets.DH_USERNAME }}
+          docker_password: ${{ secrets.DH_PASSWORD }}
           image: nishanth2101/quotes:latest        
        
