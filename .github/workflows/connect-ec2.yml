@@ -33,7 +33,7 @@ jobs:
         with: 
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: ap-south-1
           instance-ids: i-0e7afd844ebe480ff
           command: sudo docker pull nishanth2101/quotes:latest
           working-directory: .
