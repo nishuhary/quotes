@@ -1,0 +1,23 @@
+name: Testing
+
+on:
+  push:
+    branches: [ master ]
+  release:
+    types:
+      - published
+        
+jobs:
+
+  build:
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Setup TestingBot Tunnel    
+        uses: tiesjan/setup-testingbot-tunnel@v1
+        with:
+           testingbot_key: 7361d66b07bf76147f81b330a94be922
+           testingbot_secret: 5e4b3cbc313d41ce4de9ceb86d8ecaa3
+           testingbot_tunnel_download_url: https://github.com/testingbot/karma-testingbot-example.git
+    
