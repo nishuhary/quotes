@@ -51,24 +51,11 @@ jobs:
           tags: nishanth2101/quotes:latest, nishanth2101/quotes:${{ github.run_number }}
           file: ./Dockerfile
           
-      - name: Docker Buildx Pull or Build
-        uses: djbender/docker-buildx-pull-or-build@v0.5
-        with:
-          docker_username: ${{ secrets.DH_USERNAME }}
-          docker_password: ${{ secrets.DH_PASSWORD }}
-          image: nishanth2101/quotes:latest   
-          
       - name: Docker Run Action
-  # You may pin to the exact commit or the version.
-  # uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185
         uses: addnab/docker-run-action@v3
         with:
-    # Image
-          image: -p 90:80 nishanth2101/quotes:latest
-    # Options
-           
-    # Run command in container
-          
+        # Image
+          image: -p 90:80 nishanth2101/quotes:latest        
   
    
        
