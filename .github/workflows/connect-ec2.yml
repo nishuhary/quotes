@@ -28,3 +28,14 @@ jobs:
             sudo docker pull nishanth2101/quotes:latest
             sudo docker images
             
+      - name: AWS SSM Send-Command
+        uses: peterkimzz/aws-ssm-send-command@v1.1.1
+        with: 
+          aws-access-key-id: AKIA5R3OGKLP4LTNU2W2
+          aws-secret-access-key: 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
+          aws-region: ap-south-1
+          instance-ids: i-0e7afd844ebe480ff
+          command: sudo docker pull nishanth2101/quotes:latest
+          working-directory: .
+          
+            
