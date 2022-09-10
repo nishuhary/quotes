@@ -1,2 +1,0 @@
-import: travis-ci/shared-configs:rubies.yml@main
-script: bundle exec rake
