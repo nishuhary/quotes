@@ -1,1 +1,1 @@
-console.log(username)
+console.log(quote)
