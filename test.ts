@@ -1,4 +1,4 @@
-let resp = await fetch("https://google.com");
+let resp = await fetch("https://13.233.121.162:90");
 console.log(resp.status); // 200
 console.log(resp.headers.get("Content-Type")); // "text/html"
 console.log(await resp.text()); // "Hello, World!"
